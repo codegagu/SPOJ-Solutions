@@ -3,10 +3,9 @@
 using namespace std;
 #define N 1000000
 
-int primes[78498];
+
 int divisorSum[N+1];
 bool isPrime[N+1];
-bool isK[N];
 
 int X[N+1];
 int Cumulative[N+1];
@@ -18,7 +17,7 @@ void pre()
     {
         if(isPrime[i])
         {
-            primes[pos++]=i;
+
             divisorSum[i]=i+1;
 
             for(int j=i+i ; j<=N ; j+=i)
@@ -73,6 +72,6 @@ int main()
             cout<<ans<<endl;
 
     }
-    
+
     return 0;
 }
